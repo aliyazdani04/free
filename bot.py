@@ -177,6 +177,26 @@ while True:
 								# rules.close()
 							except:
 								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))
+						
+						elif msg.get("text") == "آرام" and msg.get("author_object_guid") in admins:
+							try:
+								number = 15
+								bot.setGroupTimer(target,number)
+
+								bot.sendMessage(target, "✅ حالت آرام برای "+str(number)+"ثانیه فعال شد", message_id=msg.get("message_id"))
+
+							except:
+								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))
+								
+						elif msg.get("text") == "ارام" and msg.get("author_object_guid") in admins:
+							try:
+								number = 5
+								bot.setGroupTimer(target,number)
+
+								bot.sendMessage(target, "✅ حالت آرام برای "+str(number)+"ثانیه فعال شد", message_id=msg.get("message_id"))
+
+							except:
+								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))		
 
 						elif msg.get("text") == "حالت آرام" and msg.get("author_object_guid") in admins:
 							try:
@@ -187,27 +207,7 @@ while True:
 
 							except:
 								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))
-                
-                                               elif msg.get("text") == "آرام(5)" and msg.get("author_object_guid") in admins:
-							try:
-								number = 5
-								bot.setGroupTimer(target,number)
-
-								bot.sendMessage(target, "✅ حالت آرام برای "+str(number)+"ثانیه فعال شد", message_id=msg.get("message_id"))
-
-							except:
-								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))  
-            
-                                               elif msg.get("text") == "آرام(15)" and msg.get("author_object_guid") in admins:
-							try:
-								number = 15
-								bot.setGroupTimer(target,number)
-
-								bot.sendMessage(target, "✅ حالت آرام برای "+str(number)+"ثانیه فعال شد", message_id=msg.get("message_id"))
-
-							except:
-								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))
-                
+								
 						elif msg.get("text") == "برداشتن حالت آرام" and msg.get("author_object_guid") in admins:
 							try:
 								number = 0
