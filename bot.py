@@ -188,7 +188,7 @@ while True:
 							except:
 								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))
                 
-            elif msg.get("text") == "آرام(5)" and msg.get("author_object_guid") in admins:
+                                               elif msg.get("text") == "آرام(5)" and msg.get("author_object_guid") in admins:
 							try:
 								number = 5
 								bot.setGroupTimer(target,number)
@@ -198,7 +198,7 @@ while True:
 							except:
 								bot.sendMessage(target, "❌ لطفا دستور را به درستی وارد کنید", message_id=msg.get("message_id"))  
             
-            elif msg.get("text") == "آرام(15)" and msg.get("author_object_guid") in admins:
+                                               elif msg.get("text") == "آرام(15)" and msg.get("author_object_guid") in admins:
 							try:
 								number = 15
 								bot.setGroupTimer(target,number)
