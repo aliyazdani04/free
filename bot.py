@@ -20,6 +20,22 @@ target=input("Please Enter Your Guid (Group): ")
 
 print ("\nThe robot was successfully activated.")
 
+async def check_member(_, client, message):
+    try:
+        user_id = message.from_user.id
+        user = await client.get_chat_member('samyborder', user_id)
+        if user.status in ['member', 'creator', 'administrator']:
+            return True
+    except:
+        message.reply("""
+                        
+                        شما هنوز داخل من عضو نیستید اول باید عضو شوید 
+                        
+                        ❤ @
+                        
+                        """)
+        return False 
+
 def hasAds(msg):
 	links = ["http://","https://",".ir",".com",".org",".net",".me"]
 	for i in links:
